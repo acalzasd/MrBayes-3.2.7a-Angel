@@ -11,7 +11,7 @@
 int main()
 { 
     // Nombre archivos
-    char nameTemp[100] = "./data-T4-PT/tempIndex.dat";
+    char nameTemp[100] = "./tempIndex.dat";
     char nameRho[100] = "rho.dat";
     char nameDat[100] = "output.txt";
 
