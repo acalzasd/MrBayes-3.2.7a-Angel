@@ -11,7 +11,7 @@ debe modificar la línea 14 y añadir la ruta del fichero "tempIndex.dat".
 
 Build instructions, very very short version (would install MrBayes as
 "/usr/local/bin/mb" on a Unix system):
-    git clone --depth=1 
+    git clone --depth=1 https://github.com/acalzasd/MrBayes-3.2.7a-Angel.git
     cd MrBayes
     ./configure
     make && sudo make install
