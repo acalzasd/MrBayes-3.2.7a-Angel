@@ -682,7 +682,7 @@ void GetSummary (MrBFlt **vals, int nRows, int *rowCount, Stat *theStats, int HP
     ESS = (MrBFlt *) SafeMalloc ((size_t)nRows * sizeof(MrBFlt));
 
     EstimatedSampleSize (vals, nRows, rowCount, ESS);
-    theStats->avrESS = ->minESS = ESS[0];
+    theStats->avrESS = theStats->minESS = ESS[0];
     for (i=1; i<nRows; i++)
         {
         theStats->avrESS += ESS[i];
