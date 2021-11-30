@@ -9,6 +9,15 @@ Se añade, por consiguiente, además del MrBayes modificado un programa
 en C que permite este análisis, denominado "analisisR.c", en cual se 
 debe modificar la línea 14 y añadir la ruta del fichero "tempIndex.dat".
 
+MrBayes 3.2.7a modified by Angel Calzas allows working with temperatures 
+lower than 1 with the parameter "RedTemp", and it allows changes only 
+between chains with adjacent temperatures in the Parallel Tempering. 
+In addition, it exports the indices of the chains in a file named 
+"tempIndex.dat", in order to be able to carry out a convergence analysis 
+with the autocorrelation times. Therefore, in addition to the modified 
+MrBayes, a C program is added which allows this analysis, called "analisisR.c", 
+in which line 14 must be modified to add the path to the file "tempIndex.dat".
+
 Build instructions, very very short version (would install MrBayes as
 "/usr/local/bin/mb" on a Unix system):
     git clone --depth=1 https://github.com/acalzasd/MrBayes-3.2.7a-Angel.git
