@@ -19,7 +19,7 @@ int main()
     FILE *input, *output1, *output2;
     int nfilas, ncol, i, j, k, ngen, nchains, nswap;
     double **rho, *f, *prob, *rhoMean, *mean;
-    double errorRel, auxRho, auxRho2, auxInt, tauInt;
+    double errorRel, auxRho, auxRho2, auxInt, tauInt, var;
     char buffer[Lmax];
     char s[2] ="\t";
     char *num;
@@ -125,7 +125,10 @@ int main()
         tauInt+=0.5;
         errorRel=fabs(auxInt-tauInt)/fabs(auxInt);
     } while(errorRel>prec);
+    var=(2*(2*i*nswap+1)/(float)(ndat*nswap))*(tauInt*nswap)*(tauInt*nswap);
     fprintf(output2,"Integrated autocorrelation time: %f\n",tauInt*nswap);
+    fprintf(output2,"Varianza: %f\n",var);
+    fprintf(output2,"Desviación típica: %f\n",sqrt(var));
     fprintf(output2,"Pasos empleados: %d\n",i);
     fclose(output2);
 
